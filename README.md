@@ -27,7 +27,7 @@ Content (front and back) can emmit `fc-flip` to trigger flip animation to occur.
 
 2. Provide data
    ```JS
-   <flip-card v-for="item in demo_items" :key="item.id">
+   <flip-card v-for="item in items" :key="item.id">
       <template #front="{ flip }">
           <content-demo @fc-flip="flip"/>
       </template>
