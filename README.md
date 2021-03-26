@@ -1,4 +1,8 @@
-# hello-world
+# VueJS FlipCard
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+This project was buid to demonstrate the usage of `FlipCard.vue` component.
 
 ## Project setup
 ```
@@ -10,15 +14,30 @@ npm install
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+<!-- USAGE EXAMPLES -->
+## Usage
 
-### Lints and fixes files
-```
-npm run lint
-```
+To use FlipCard, provide content to `front` and `back` slots.
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Content (front and back) can emmit `fc-flip` to trigger flip animation to occur.
+1. Import FlipCard
+   ```JS
+   import FlipCard from "./components/FlipCard.vue";
+   ```
+
+2. Provide data
+  ```JS
+  <flip-card v-for="item in demo_items" :key="item.id">
+      <template #front="{ flip }">
+          <content-demo :text="item.front" @flip="flip"/>
+      </template>
+      <template #back="{ flip }">
+          <content-demo :text="item.back" @flip="flip"/>
+      </template>
+  </flip-card>
+  ```
+  
+ 3. Trigger flip from content
+   ```JS
+   this.$emit("fc-flip");
+   ```
