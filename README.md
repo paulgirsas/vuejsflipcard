@@ -26,18 +26,18 @@ Content (front and back) can emmit `fc-flip` to trigger flip animation to occur.
    ```
 
 2. Provide data
-  ```JS
-  <flip-card v-for="item in demo_items" :key="item.id">
+   ```JS
+   <flip-card v-for="item in demo_items" :key="item.id">
       <template #front="{ flip }">
-          <content-demo :text="item.front" @flip="flip"/>
+         <content-demo :text="item.front" @flip="flip"/>
       </template>
       <template #back="{ flip }">
-          <content-demo :text="item.back" @flip="flip"/>
+         <content-demo :text="item.back" @flip="flip"/>
       </template>
-  </flip-card>
-  ```
+   </flip-card>
+   ```
   
- 3. Trigger flip from content
+3. Trigger flip from content
    ```JS
    this.$emit("fc-flip");
    ```
