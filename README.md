@@ -29,10 +29,10 @@ Content (front and back) can emmit `fc-flip` to trigger flip animation to occur.
    ```JS
    <flip-card v-for="item in demo_items" :key="item.id">
       <template #front="{ flip }">
-         <content-demo :text="item.front" @flip="flip"/>
+         <content-demo @flip="flip"/>
       </template>
       <template #back="{ flip }">
-         <content-demo :text="item.back" @flip="flip"/>
+         <content-demo @flip="flip"/>
       </template>
    </flip-card>
    ```
