@@ -2,11 +2,11 @@
     <div id="app">
         <flip-card v-for="item in demo_items" :key="item.id">
             <template #front="{ flip }">
-                <content-demo :text="item.front" @flip="flip"/>
+                <content-demo :text="item.front" @fc-flip="flip"/>
             </template>
 
             <template #back="{ flip }">
-                <content-demo :text="item.back" @flip="flip"/>
+                <content-demo :text="item.back" @fc-flip="flip"/>
             </template>
         </flip-card>
     </div>

@@ -27,7 +27,7 @@ export default {
     },
     methods: {
         emitFlip() {
-            this.$emit("flip");
+            this.$emit("fc-flip");
         },
     },
 };
